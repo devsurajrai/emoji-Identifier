@@ -27,32 +27,22 @@ var emojiData={
 
 var emojiDataArray=Object.keys(emojiData);
 
-
-
-
 var color="white";
 
 function App() {
-
-
-
   const [value,setValue]=useState("")
-  
   function emojiClickHandler(emoji){
    var emojiMeaning=emojiData[emoji];
    setValue(emojiMeaning)}
 
    function emojiInputHandler(event){
         var emojiInputMeaning=event.target.value
-        
         var value=emojiData[emojiInputMeaning]
-
         if(value===undefined){
           value="we don't have this emoji in our database"
         }
         setValue(value)
    }
-  
   return (
     <div className="emoji-identifier">
       <div className="emoji-identifier-child">
@@ -60,23 +50,17 @@ function App() {
              <h1 style={{color:color}}>Emoji Identifier</h1>
              <input placeholder="Please enter an emoji" onChange={emojiInputHandler}></input>
              <h1 style={{fontSize:"40px"}}>{value}</h1>
-             
         </div>
-     
       </div>
             <div className="emoji-identifier-child-adj">
                 <h2>Emojis</h2>
                 <h3>Click any one to know the meaning</h3>
-        
                  {emojiDataArray.map((emoji)=>{
                      return(
-                        <p onClick={()=>emojiClickHandler(emoji)}
-                          style={{fontSize:"40px", display:"inline",padding:"1.5rem",marginLeft:"18px",marginTop:"20px",cursor:"pointer"}} >{emoji}</p>
+                        <p className="emojis-display"onClick={()=>emojiClickHandler(emoji)}>{emoji}</p>
                           )
-                          })}
-
-            </div>
-            
+                 })}
+       </div>
         </div>
   );
 }
