@@ -9,7 +9,7 @@ It an emoji as an input from the user  and shows the user what emoji it is. Also
 ### Screenshot
 ![emoji-identifier-app-ss](src/emoji-identifier%20ss.png)
 
-## Visit Live: [Live Link](http://emojiknow.netlify.app)
+## Visit Live: [Go to project](http://emojiknow.netlify.app)
 
 
 
