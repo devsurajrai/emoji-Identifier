@@ -1,6 +1,6 @@
 # Emoji Identifier
 
-### This is an Imoji Identifier App made with React JS.
+### This is an Emoji Identifier App made with React JS.
 
 ## What it does?
 
